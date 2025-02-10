@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cyber673 - Cybersecurity Community</title>
+    <title>cyber673</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         /* Cyber-themed dark styling */
         * {
@@ -155,6 +156,47 @@
                 gap: 1rem;
             }
         }
+
+        .cyber-link {
+            color: #00ff00;
+            text-decoration: none;
+            position: relative;
+            padding: 0 2px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-link::before {
+            content: '[';
+            color: #00ff00;
+            opacity: 0;
+            margin-right: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-link::after {
+            content: ']';
+            color: #00ff00;
+            opacity: 0;
+            margin-left: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #00ff00;
+        }
+
+        .cyber-link:hover::before,
+        .cyber-link:hover::after {
+            opacity: 1;
+        }
+
+        /* Partner section styling */
+        .partners {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 255, 0, 0.2);
+        }
     </style>
 </head>
 
@@ -171,6 +213,7 @@
             <ul>
                 <li><a href="#about">./whoarewe</a></li>
                 <li><a href="#events">./events</a></li>
+                <li><a href="https://github.com/cyber673/resources">./resources</a></li>
             </ul>
         </div>
     </nav>
@@ -178,8 +221,17 @@
     <main class="container">
         <section id="about">
             <h2>> whoarewe</h2>
-            <p>cyber673 is group of cybersecurity enthusiasts who want to share what they know and grow local capabilities when it comes to offensive & defensive cybersecurity.
+            <p>cyber673 is group of cybersecurity enthusiasts who want to share what they know and grow local
+                capabilities when it comes to offensive & defensive cybersecurity. We are a community of hackers,
+                security professionals, students, and anyone who is interested in cybersecurity.
             </p>
+
+            <div class="partners">
+                <p>Our events are powered by <a href="https://swarmnetics.com" target="_blank"
+                        class="cyber-link">Swarmnetics</a> & <a href="https://www.nitro-sec.com/" target="_blank"
+                        class="cyber-link">Nitro Security</a> and supported by <a href="https://www.pksbrunei.org/"
+                        target="_blank" class="cyber-link">Brunei Cyber Security Association</a>.</p>
+            </div>
         </section>
 
         <section id="events">
@@ -192,7 +244,8 @@
                     Talk Recon using NMAP - Izdihar <br>
                     Workshop Recon Practical with mini-CTF - team cyber673
                 </p>
-                <a href="https://events.teams.microsoft.com/event/ee3b279d-8bad-4e80-92eb-3eed788e5785@26027950-9194-4e49-8ebb-c832a3fd32c5" class="cta-button">./register</a>
+                <a href="https://events.teams.microsoft.com/event/ee3b279d-8bad-4e80-92eb-3eed788e5785@26027950-9194-4e49-8ebb-c832a3fd32c5"
+                    class="cta-button">./register</a>
             </div>
         </section>
 
