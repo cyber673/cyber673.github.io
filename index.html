@@ -7,7 +7,6 @@
     <title>cyber673</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        /* Cyber-themed dark styling */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +17,6 @@
         body {
             line-height: 1.6;
             color: #00ff00;
-            /* Matrix green */
             background-color: #000000;
         }
 
@@ -62,7 +60,7 @@
         }
 
         section {
-            padding: 3rem 0;
+            padding: 1rem 0;
             background-color: #111111;
             margin: 2rem 0;
             border-radius: 8px;
@@ -101,6 +99,37 @@
             margin: 10px 0;
             border-radius: 5px;
             background-color: #0a0a0a;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-card:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .event-card img {
+            width: 300px;
+            height: 460px;
+            border-radius: 5px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .event-card h3 {
+            color: #00ff00;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        .event-card p {
+            color: #00ff00;
+            margin: 5px 0;
+        }
+
+        .event-card a.cta-button {
+            margin-top: 15px;
         }
 
         footer {
@@ -112,13 +141,11 @@
             border-top: 1px solid #00ff00;
         }
 
-        /* Terminal effect for text */
         p {
             color: #00ff00;
             margin: 10px 0;
         }
 
-        /* Custom bullet points */
         ul {
             list-style: none;
             padding-left: 20px;
@@ -129,7 +156,6 @@
             color: #00ff00;
         }
 
-        /* Blinking cursor effect */
         .cursor {
             animation: blink 1s infinite;
         }
@@ -151,32 +177,24 @@
         @media (max-width: 768px) {
             .container {
                 padding: 0 10px;
-                /* Reduce container padding on small screens */
             }
 
             nav ul {
                 flex-direction: column;
-                /* Stack navigation links */
                 text-align: center;
                 gap: 1rem;
             }
 
             .event-card {
                 flex-direction: column;
-                /* Stack image and text */
                 align-items: flex-start;
-                /* Align items to the start */
             }
 
             .event-card img {
                 width: 100%;
-                /* Image takes full width */
                 height: auto;
-                /* Maintain aspect ratio */
                 margin-bottom: 10px;
-                /* Space below image */
                 margin-right: 0;
-                /* Remove right margin */
             }
         }
 
@@ -214,52 +232,57 @@
             opacity: 1;
         }
 
-        /* Partner section styling */
         .partners {
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid rgba(0, 255, 0, 0.2);
         }
 
-        .event-card {
-            border: 1px solid #00ff00;
+        /* Goons Section Styling */
+        .goon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #0a0a0a;
+        }
+
+        .goon-card {
+            text-align: center;
             transition: all 0.3s ease;
-            display: flex;
-            /* Added flex layout */
-            align-items: center;
-            /* Vertically center content */
         }
 
-        .event-card:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-            transform: translateY(-3px);
+        .goon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
         }
 
-        .event-card img {
-            width: 240px;
-            height: 380px;
-            border-radius: 5px;
-            margin-right: 20px;
+        .goon-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             object-fit: cover;
-        }
-
-        .event-card h3 {
-            color: #00ff00;
+            background-color: #333;
             margin-bottom: 10px;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            border: 1px solid #00ff00;
         }
 
-        .event-card p {
-            color: #00ff00;
+        .goon-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .goon-card p {
             margin: 5px 0;
         }
 
-        .event-card a.cta-button {
-            margin-top: 15px;
+        .goon-card a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .goon-card a:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -278,6 +301,7 @@
                 <li><a href="#about">./whoarewe</a></li>
                 <li><a href="#events">./events</a></li>
                 <li><a href="https://github.com/cyber673/resources">./resources</a></li>
+                <li><a href="#goons">./goons</a></li>
             </ul>
         </div>
     </nav>
@@ -285,7 +309,8 @@
     <main class="container">
         <section id="about">
             <h2>> whoarewe</h2>
-            <p style="padding: 10px">cyber673 is group of cybersecurity enthusiasts who want to share what they know and
+            <p style="padding: 10px">cyber673 is group of cybersecurity enthusiasts who want to share what they know
+                and
                 grow local
                 capabilities when it comes to offensive & defensive cybersecurity. We are a community of hackers,
                 security professionals, students, and anyone who is interested in cybersecurity.
@@ -294,8 +319,9 @@
             <div class="partners">
                 <p style="padding: 10px">Our events are powered by <a href="https://swarmnetics.com" target="_blank"
                         class="cyber-link">Swarmnetics</a> & <a href="https://www.nitro-sec.com/" target="_blank"
-                        class="cyber-link">Nitro Security</a> and supported by <a href="https://www.pksbrunei.org/"
-                        target="_blank" class="cyber-link">Brunei Cyber Security Association</a>.
+                        class="cyber-link">Nitro Security</a> and supported by <a href="https://bcsa.wildapricot.org/"
+                        target="_blank" class="cyber-link">Brunei Cyber Security
+                        Association</a>.
                 </p>
             </div>
         </section>
@@ -303,24 +329,30 @@
         <section id="events">
             <h2>> Upcoming_Events</h2>
             <div class="event-card">
-                <img src="/photos/session4.jpeg" alt="session image">
+                <img src="/photos/session5.jpeg" alt="session image">
                 <div>
-                    <h3>session#4 (meetup)</h3>
-                    <p>Date: 12 February 2025</p>
-                    <p>Time: 7:30PM - 9:30PM</p>
+                    <h3>session#5 (meetup)</h3>
+                    <p>Date: 15 March 2025</p>
+                    <p>Time: 9PM - 12AM</p>
                     <p>Location: Level 1, Brunei Innovation Lab, KHUB Building, Anggerek</p>
                     <p>
-                        Talk: OSINT Fundamentals - Fauzan<br>
-                        Workshop: Hands On - OSINT in Practice - Rahman - Rahman
+                        9PM - 920PM <br>
+                        •⁠ ⁠Arrival & Networking⁠⁠ <br>
+                        920PM - 10PM <br>
+                        •⁠ ⁠Talk - Defend your Org (or at least try to)! (TBC) <br>
+                        •⁠ ⁠⁠Talk - TBC <br>
+                        10PM - 12AM <br>
+                        •⁠ ⁠⁠Hands On - Blue Team in Practice + Sahur CTF (Team cyber673) <br> <br>
+                        note: 🍕 included, expect a CTF prize and we hope the usual sahur Saturday will be open as
+                        well!
                     </p>
-                    <a href="https://forms.office.com/r/t3apa5XMLs"
-                        class="cta-button">./register</a>
+                    <a href="https://forms.office.com/r/9bXeva89kb" class="cta-button">./register</a>
                 </div>
             </div>
         </section>
 
     </main>
-    
+
     <footer>
         <div class="container">
             <p>/* © 2025 cyber673. All rights reserved. */</p>
