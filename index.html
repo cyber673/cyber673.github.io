@@ -6,285 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cyber673</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Consolas', 'Monaco', monospace;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #00ff00;
-            background-color: #000000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #111111;
-            color: #00ff00;
-            padding: 2rem 0;
-            text-align: center;
-            border-bottom: 1px solid #00ff00;
-        }
-
-        nav {
-            background-color: #111111;
-            padding: 1rem 0;
-            border-bottom: 1px solid #00ff00;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: #00ff00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px #00ff00;
-        }
-
-        section {
-            padding: 1rem 0;
-            background-color: #111111;
-            margin: 2rem 0;
-            border-radius: 8px;
-            border: 1px solid #00ff00;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: #00ff00;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #111111;
-            color: #00ff00;
-            text-decoration: none;
-            border: 1px solid #00ff00;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #00ff00;
-            color: #000000;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-        }
-
-        .event-card {
-            border: 1px solid #00ff00;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #0a0a0a;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .event-card:hover {
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-            transform: translateY(-3px);
-        }
-
-        .event-card img {
-            width: 300px;
-            height: 460px;
-            border-radius: 5px;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-
-        .event-card h3 {
-            color: #00ff00;
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-        }
-
-        .event-card p {
-            color: #00ff00;
-            margin: 5px 0;
-        }
-
-        .event-card a.cta-button {
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: #111111;
-            color: #00ff00;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-            border-top: 1px solid #00ff00;
-        }
-
-        p {
-            color: #00ff00;
-            margin: 10px 0;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        ul li:before {
-            content: "> ";
-            color: #00ff00;
-        }
-
-        .cursor {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .event-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .event-card img {
-                width: 100%;
-                height: auto;
-                margin-bottom: 10px;
-                margin-right: 0;
-            }
-        }
-
-        .cyber-link {
-            color: #00ff00;
-            text-decoration: none;
-            position: relative;
-            padding: 0 2px;
-            transition: all 0.3s ease;
-        }
-
-        .cyber-link::before {
-            content: '[';
-            color: #00ff00;
-            opacity: 0;
-            margin-right: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .cyber-link::after {
-            content: ']';
-            color: #00ff00;
-            opacity: 0;
-            margin-left: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .cyber-link:hover {
-            color: #ffffff;
-            text-shadow: 0 0 8px #00ff00;
-        }
-
-        .cyber-link:hover::before,
-        .cyber-link:hover::after {
-            opacity: 1;
-        }
-
-        .partners {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0, 255, 0, 0.2);
-        }
-
-        /* Goons Section Styling */
-        .goon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .goon-card {
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .goon-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-        }
-
-        .goon-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            background-color: #333;
-            margin-bottom: 10px;
-            border: 1px solid #00ff00;
-        }
-
-        .goon-card h3 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-
-        .goon-card p {
-            margin: 5px 0;
-        }
-
-        .goon-card a {
-            color: #00ff00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .goon-card a:hover {
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -301,7 +23,7 @@
                 <li><a href="#about">./whoarewe</a></li>
                 <li><a href="#events">./events</a></li>
                 <li><a href="https://github.com/cyber673/resources">./resources</a></li>
-                <li><a href="#goons">./goons</a></li>
+                <li><a href="/vdp.html">./report_vuln</a></li>
             </ul>
         </div>
     </nav>
@@ -347,6 +69,41 @@
                         well!
                     </p>
                     <a href="https://forms.office.com/r/9bXeva89kb" class="cta-button">./register</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="goons">
+            <h2>> goons</h2>
+            <p style="padding: 10px">The following people are the current active contributors to cyber673 meetups,
+                contact us (via our linkedin, etc) if you are interested in contributing or helping out with the
+                meetups:</p>
+            <div class="goon-grid">
+                <div class="goon-card">
+                    <img src="/photos/goons/iz.jpeg" alt="izdihar">
+                    <h3>izdiwho</h3>
+                    <p>likes to break stuff</p>
+                    <a href="https://linkedin.com/izdihar-s">./li</a> |
+                    <a href="https://izdiwho.com">./web</a> |
+                    <a href="https://notes.izdiwho.com">./blog</a>
+                </div>
+                <div class="goon-card">
+                    <img src="/photos/goons/rahman.jpeg" alt="rahman">
+                    <h3>Rahman</h3>
+                    <p>Short description here.</p>
+                    <a href="#">./link</a>
+                </div>
+                <div class="goon-card">
+                    <img src="/photos/goons/fauzan.jpeg" alt="fauzan">
+                    <h3>Fauzan</h3>
+                    <p>Short description here.</p>
+                    <a href="#">./link</a>
+                </div>
+                <div class="goon-card">
+                    <img src="/photos/goons/hafiz.jpeg" alt="hafiz">
+                    <h3>Hafiz</h3>
+                    <p>Short description here.</p>
+                    <a href="#">./link</a>
                 </div>
             </div>
         </section>
