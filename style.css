@@ -310,3 +310,26 @@ ul li:before {
     background-color: #00ff00;
     color: #000000;
 }
+
+/* Consent Page Specific Styles */
+.consent-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}
+
+.consent-section h3 {
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 0.5rem;
+}
+
+.consent-section ul {
+    list-style: square;
+    /* Or another style you prefer */
+    padding-left: 20px;
+}
+
+.consent-section li {
+    margin-bottom: 0.5rem;
+}
