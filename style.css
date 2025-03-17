@@ -159,6 +159,7 @@ ul li:before {
     position: relative;
     padding: 0 2px;
     transition: all 0.3s ease;
+    text-decoration: underline;
 }
 
 .cyber-link::before {
@@ -195,6 +196,10 @@ ul li:before {
 
 /* Event Card Styles */
 
+#events {
+    padding: 20px;
+}
+
 .event-card {
     border: 1px solid #00ff00;
     padding: 20px;
@@ -203,6 +208,11 @@ ul li:before {
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
+}
+
+.event-detail {
+    color: #00ff00;
+    margin-bottom: 15px;
 }
 
 .event-card:hover {
@@ -234,6 +244,10 @@ ul li:before {
 }
 
 /* Goons Section Styling */
+#goons {
+    padding: 20px;
+}
+
 .goon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -332,4 +346,66 @@ ul li:before {
 
 .consent-section li {
     margin-bottom: 0.5rem;
+}
+
+/* Additions to style.css */
+
+/* Services Section Styling */
+#services {
+    padding: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.service-card h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #00ff00;
+}
+
+.service-card ul li {
+    margin-bottom: 5px;
+}
+
+.service-card .cta-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #111;
+    color: #00ff00;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-card .cta-button:hover {
+    background-color: #00ff00;
+    color: #000;
 }
