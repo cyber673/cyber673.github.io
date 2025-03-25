@@ -409,3 +409,36 @@ ul li:before {
     background-color: #00ff00;
     color: #000;
 }
+
+/* Themes Section Styling */
+#themes {
+    padding: 20px;
+}
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.theme-card {
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.theme-card h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.theme-card p {
+    color: #00ff00;
+}
